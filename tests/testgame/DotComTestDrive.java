@@ -1,3 +1,4 @@
+package testgame;
 import gamelogic.*;
 public class DotComTestDrive {
     public static void main(String[] args) {
