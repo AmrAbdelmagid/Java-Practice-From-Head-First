@@ -1,13 +1,20 @@
-import gamelogic.SimpleDotCom;
+import java.util.ArrayList;
+
+import gamelogic.DotCom;
 
 public class SinkDotComGame {
     public static void main(String[] args) throws Exception {
         int numOfGuesses = 0;
         GameHelper helper = new GameHelper();
-        SimpleDotCom theDotCom = new SimpleDotCom();
+        DotCom theDotCom = new DotCom();
         int randomNum = (int) (Math.random() * 5);
 
-        int[] locations = { randomNum, randomNum + 1, randomNum + 2 };
+        ArrayList<String> locations = new ArrayList<String>();
+        // locations = { randomNum, randomNum + 1, randomNum + 2 };
+        for (int i = 0; i < 3; i++){
+            randomNum ++;
+            locations.add(String.valueOf(randomNum));
+        }
         theDotCom.setLocationCells(locations);
         boolean isAlive = true;
         while (isAlive) {
